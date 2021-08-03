@@ -1,10 +1,5 @@
-from typing import TextIO
-
-import bs4
-import sys
 import requests
-from sys import argv
-from string import punctuation
+import bs4
 from gensim.summarization import keywords
 
 output_file = "output.txt"
@@ -19,7 +14,6 @@ with open(output_file, "w", encoding="utf-8") as f:
         # write each paragraph to the file
         f.write(i.getText())
 
-f: TextIO
 with open(output_file2, "w", encoding="utf-8") as f:
     for i in wiki.select("p"):
         # write each paragraph to the file
